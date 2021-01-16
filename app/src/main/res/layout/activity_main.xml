@@ -31,23 +31,27 @@
         android:id="@+id/is_support_blue_tooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="isSupportBlueTooth"
+        android:text="@string/support_bluetooth" />
 
     <Button
         android:id="@+id/is_blue_tooth_enable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="isBlueToothEnable"
+        android:text="@string/is_turn_on" />
 
     <Button
         android:id="@+id/turn_on_blue_tooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="requestTurnOnBlueTooth"
+        android:text="@string/turn_on" />
 
     <Button
         android:id="@+id/turn_off_blue_tooth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="requestTurnOffBlueTooth"
+        android:text="@string/turn_off" />
 </LinearLayout>

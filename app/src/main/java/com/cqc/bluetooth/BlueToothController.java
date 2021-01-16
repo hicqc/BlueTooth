@@ -9,6 +9,7 @@ import android.content.Intent;
  */
 public class BlueToothController {
 
+    //该对象存活即表示蓝牙打开
     private BluetoothAdapter mAdapter;
 
     public BlueToothController() {
@@ -36,8 +37,21 @@ public class BlueToothController {
         return mAdapter.isEnabled();
     }
 
+    /**
+     * 打开蓝牙
+     * @param activity
+     * @param requestCode
+     */
     public void turnOnBlueTooth(Activity activity,int requestCode){
         Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         activity.startActivityForResult(intent,requestCode);
+//        mAdapter.enable();
+    }
+
+    /**
+     * 关闭蓝牙
+     */
+    public void turnOffBlueTooth() {
+        mAdapter.disable();
     }
 }
